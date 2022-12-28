@@ -1,3 +1,22 @@
+// moblie menu
+const selectElement = (element) => document.querySelector(element);
+
+selectElement('.mobile-menu').addEventListener('click', () => {
+    selectElement('header').classList.toggle('active');
+    selectElement('.container').classList.toggle('active');
+    
+    
+});
+
+
+
+
+
+
+
+
+
+
 function setFormMessage(formElement, type, message) {
     const messageElement = formElement.querySelector(".form__message");
 
@@ -20,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#login");
     const createAccountForm = document.querySelector("#createAccount");
 
+
     document.querySelector("#linkCreateAccount").addEventListener("click", e => {
         e.preventDefault();
         loginForm.classList.add("form__hidden");
@@ -31,6 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
         loginForm.classList.remove("form__hidden");
         createAccountForm.classList.add("form__hidden");
     });
+
+
+
+
+    
+
+
 
     loginForm.addEventListener("submit", e => {
         e.preventDefault();
