@@ -1,4 +1,4 @@
-<!-- changes -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,19 +77,19 @@
             </nav>
         </div>
     <div class="container" id="hide">
-        <form class="form " id="login">          <!--action="Post"  REMOVED-->
-            <h1 class="form__title">Sign in to Apple Store</h1>
+        <form onsubmit="loginfunc()" class="form " id="login">          <!--action="Post"  REMOVED-->
+            <h1 class="form__title" id="result">Sign in to Apple Store</h1>
             <div class="logo"></div>
             <div class="form__message form__message--error"></div>           
             <div class="form__input-group">
-                <input type="text" class="form__input" autofocus placeholder="Apple ID">
+                <input type="username" class="form__input" id="userName" autofocus placeholder="Apple ID">
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="password" class="form__input " autofocus placeholder="Password">
+                <input type="password" id="userPw" class="form__input " autofocus placeholder="Password">
                 <div class="form__input-error-message"></div>
             </div>
-            <button class="form__button" type="submit">Continue</button>
+            <button class="form__button login" type="submit" value="Login" onclick="check()">Continue</button>
             <p class="form__text">
                 <a href="#" class="form__link">Forgot your Password</a>
             </p>
@@ -97,7 +97,7 @@
                 <a  class="form__link" href="./" id="linkCreateAccount" >Don't have an account? Create account</a>
             </p>
         </form> 
-        <form class="form form__hidden " id="createAccount">         
+        <form action="" class="form form__hidden " id="createAccount">         
             <h1 class="form__title">Create Your Apple ID</h1>
             <div class="form__message form__message--error"></div>           
             <div class="form__input-group">
@@ -105,20 +105,20 @@
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="text" class="form__input" autofocus placeholder="Email Address">
+                <input type="text" class="form__input" id="email" autofocus placeholder="Email Address">
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="password" class="form__input " autofocus placeholder="Password">
+                <input type="password" class="form__input " id="password" autofocus placeholder="Password">
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="password" class="form__input " autofocus placeholder="Confirm Password">
+                <input type="password" class="form__input " id="cpass" autofocus placeholder="Confirm Password">
                 <div class="form__input-error-message"></div>
             </div>
-            <button class="form__button" type="submit">Continue</button> 
+            <button class="form__button button" id="rgstr_btn" type="submit" value="Register" onclick="store()" >Continue</button> 
             <p class="form__text">
-                <a  class="form__link" href="./" id="linkLogin" >Already have an account? Sign in</a>
+                <a  class="form__link " href="./" id="linkLogin" >Already have an account? Sign in</a>
             </p>
         </form>                   
     </div>
