@@ -340,6 +340,10 @@ header {
       background-color: black;
     }
   
+    .container {
+        width: 330px;
+        height: 500px;
+    }
     .container.active{
         display: none;
     }
